@@ -17,7 +17,8 @@ public class MahasiswaMain17 {
         mhs2.updateIpk(3.30);
         mhs2.tampilkanInformasi();
         
-        Mahasiswa17 mhs3 = new Mahasiswa17("Radith Ferdian", "244107060091", 3.58, "SIB 1D");
-        
+        Mahasiswa17 mhsRadith = new Mahasiswa17("Radith Ferdian Hibawan", "244107060091", 3.58, "SIB 1D");
+        mhsRadith.tampilkanInformasi();
+        mhsRadith.nilaiKinerja();
     }
 }
