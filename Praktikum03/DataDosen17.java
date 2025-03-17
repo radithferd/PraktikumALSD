@@ -73,7 +73,7 @@ public class DataDosen17 {
         System.out.println("Data dosen termuda: ");
         System.out.println("Kode          : " + arrayOfDosen[indeksDosen].kode);
         System.out.println("Nama          : " + arrayOfDosen[indeksDosen].nama);
-        System.out.println("Jenis kelamin : " + arrayOfDosen[indeksDosen].jenisKelamin);
+        System.out.println("Jenis kelamin : " + (arrayOfDosen[indeksDosen].jenisKelamin ? "Pria" : "Wanita"));
         System.out.println("Usia          : " + arrayOfDosen[indeksDosen].usia);
         System.out.println("------------------------------------------");
     }
