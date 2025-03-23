@@ -1,8 +1,13 @@
 package Praktikum05;
 
 public class MahasiswaBerprestasi17 {
-    Mahasiswa17[] listMhs = new Mahasiswa17[5];
+    Mahasiswa17[] listMhs;
     int idx;
+
+    MahasiswaBerprestasi17(int jmlMhs) {
+        listMhs = new Mahasiswa17[jmlMhs];
+        idx = 0;
+    }
 
     void tambah(Mahasiswa17 m) {
         if (idx < listMhs.length) {
@@ -15,8 +20,10 @@ public class MahasiswaBerprestasi17 {
 
     void tampil() {
         for (Mahasiswa17 m : listMhs) {
-            m.tampilInformasi();
-            System.out.println("-----------------------");
+            if (m != null) {
+                m.tampilInformasi();
+                System.out.println("-----------------------");                
+            }
         }
     }
 
@@ -29,6 +36,32 @@ public class MahasiswaBerprestasi17 {
                     listMhs[j-1] = tmp;
                 }
             }
+        }
+    }
+
+    void selectionSort() {
+        for (int i = 0; i < listMhs.length-1; i++) {
+            int idxMin = i;
+            for (int j = i+1; j < listMhs.length; j++) {
+                if (listMhs[j].ipk < listMhs[idxMin].ipk) {
+                    idxMin = j;
+                }
+            }
+            Mahasiswa17 tmp = listMhs[idxMin];
+            listMhs[idxMin] = listMhs[i];
+            listMhs[i] = tmp;
+        }
+    }
+
+    void insertionSort() {
+        for (int i = 1; i < listMhs.length; i++) {
+            Mahasiswa17 temp = listMhs[i];
+            int j = i;
+            while (j < 0 && listMhs[j-1].ipk > temp.ipk) {
+                listMhs[j] = listMhs[j-1];
+                j--;
+            }
+            listMhs[j] = temp;
         }
     }
 }
