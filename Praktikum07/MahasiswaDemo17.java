@@ -76,5 +76,6 @@ public class MahasiswaDemo17 {
             }
         } while (pilih >= 1 && pilih <= 6);
         
+        scan.close();
     }
 }

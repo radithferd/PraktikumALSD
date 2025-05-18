@@ -80,5 +80,7 @@ public class SuratDemo17 {
                     break;
             }
         } while(pilih >= 1 && pilih <= 4);
+
+        scan.close();
     }
 }
