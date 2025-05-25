@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class SLLMain17 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        SingleLinkedList17 data = new SingleLinkedList17();
+        SingleLinkedList17 sll = new SingleLinkedList17();
 
         System.out.print("Masukkan jumlah mahasiswa: ");
         int jumlah = sc.nextInt(); 
@@ -23,9 +23,21 @@ public class SLLMain17 {
             sc.nextLine();
 
             Mahasiswa17 mhs = new Mahasiswa17(nim, nama, kelas, ipk);
-            data.addLast(mhs);
-            data.print();
+            sll.addLast(mhs);
+            sll.print();
         }
         sc.close();
+
+        System.out.println("data index 1 : ");
+        sll.getData(1);
+
+        System.out.println("Data mahasiswa an Bimon berada pada index : " + sll.indexOf("Bimon"));
+        System.out.println();
+
+        sll.removeFirst();
+        sll.removeLast();
+        sll.print();
+        sll.removeAt(0);
+        sll.print();
     }
 }
